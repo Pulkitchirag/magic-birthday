@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { LoadingScreen } from "@/components/birthday/LoadingScreen";
 import { Introduction } from "@/components/birthday/Introduction";
 import { CakeStage } from "@/components/birthday/CakeStage";
-import { ConfettiReveal } from "@/components/birthday/ConfettiReveal";
+import { BalloonsStage } from "@/components/birthday/BalloonsStage";
 import { PhotoAlbum } from "@/components/birthday/PhotoAlbum";
 import { GreetingCard } from "@/components/birthday/GreetingCard";
 import { CardMessage } from "@/components/birthday/CardMessage";
@@ -32,7 +32,7 @@ const Index = () => {
         {stage === 1 && <LoadingScreen />}
         {stage === 2 && <Introduction onNext={() => setStage(3)} />}
         {stage === 3 && <CakeStage onNext={() => setStage(4)} />}
-        {stage === 4 && <ConfettiReveal onNext={() => setStage(5)} />}
+        {stage === 4 && <BalloonsStage onNext={() => setStage(5)} />}
         {stage === 5 && <PhotoAlbum onNext={() => setStage(6)} />}
         {stage === 6 && <GreetingCard onNext={() => setStage(7)} />}
         {stage === 7 && <CardMessage onNext={() => setStage(8)} />}

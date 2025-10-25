@@ -16,7 +16,7 @@ export const CakeStage = ({ onNext }: CakeStageProps) => {
     <div className="min-h-screen flex flex-col items-center justify-center px-6 animate-fade-in">
       <div className="max-w-md w-full text-center space-y-8">
         {isLit && (
-          <h1 className="text-4xl md:text-5xl font-pacifico neon-glow mb-8 animate-scale-in">
+          <h1 className="text-4xl md:text-5xl font-pacifico neon-glow mb-12 -mt-8 animate-scale-in">
             Happy Birthday, Cutiepie! 🎉
           </h1>
         )}
