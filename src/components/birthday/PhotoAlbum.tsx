@@ -13,6 +13,8 @@ export const PhotoAlbum = ({ onNext }: PhotoAlbumProps) => {
     "https://placehold.co/400x600/9D4EDD/ffffff?text=Sweet+Moment+2",
     "https://placehold.co/400x600/FF1493/ffffff?text=Sweet+Moment+3",
     "https://placehold.co/400x600/00F5FF/333333?text=Sweet+Moment+4",
+    "https://placehold.co/400x600/FFD700/333333?text=Sweet+Moment+5",
+    "https://placehold.co/400x600/A855F7/ffffff?text=Sweet+Moment+6",
   ];
 
   const handleSwipe = () => {

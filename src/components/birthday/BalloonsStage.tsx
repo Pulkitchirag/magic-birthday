@@ -51,50 +51,48 @@ export const BalloonsStage = ({ onNext }: BalloonsStageProps) => {
         </h2>
 
         {/* Balloons */}
-        <div className="flex justify-center items-end gap-8 md:gap-12 mb-12">
+        <div className="flex justify-center items-start gap-8 md:gap-12 mb-12">
           {[0, 1, 2, 3].map((index) => (
             <div key={index} className="relative flex flex-col items-center">
-              {/* Word revealed when popped */}
-              {poppedBalloons.includes(index) ? (
-                <div
-                  className="text-4xl md:text-5xl font-pacifico neon-glow-purple mb-4 animate-scale-in"
-                  style={{ minHeight: "120px", display: "flex", alignItems: "center" }}
-                >
-                  {words[index]}
-                </div>
-              ) : (
-                <button
-                  onClick={() => popBalloon(index)}
-                  className="relative cursor-pointer transform transition-all hover:scale-110 interactive-element"
-                  style={{ minHeight: "120px" }}
-                >
-                  {/* Balloon */}
-                  <div
-                    className="w-20 h-24 md:w-24 md:h-28 rounded-full shadow-lg animate-float"
-                    style={{
-                      backgroundColor: balloonColors[index],
-                      animation: `float 3s ease-in-out ${index * 0.3}s infinite`,
-                      boxShadow: `0 0 20px ${balloonColors[index]}80`,
-                    }}
-                  >
-                    {/* Balloon shine */}
-                    <div className="absolute top-2 left-3 w-4 h-6 bg-white/30 rounded-full"></div>
-                  </div>
-                  {/* Balloon knot */}
-                  <div
-                    className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-3 h-4"
-                    style={{
-                      backgroundColor: balloonColors[index],
-                      clipPath: "polygon(50% 0%, 0% 50%, 50% 100%, 100% 50%)",
-                    }}
-                  ></div>
-                </button>
-              )}
+              {/* Thread - now more visible and realistic */}
+              <div className="w-1 h-40 bg-gradient-to-b from-gray-600 via-gray-500 to-gray-400 mb-2" style={{
+                boxShadow: "0 0 2px rgba(0,0,0,0.3)"
+              }}></div>
               
-              {/* Thread */}
-              {!poppedBalloons.includes(index) && (
-                <div className="w-0.5 h-32 bg-gradient-to-b from-gray-400 to-transparent"></div>
-              )}
+              {/* Balloon or Word in same position */}
+              <div className="relative flex items-center justify-center" style={{ minHeight: "120px", minWidth: "100px" }}>
+                {poppedBalloons.includes(index) ? (
+                  <div className="text-4xl md:text-5xl font-pacifico neon-glow-purple animate-scale-in">
+                    {words[index]}
+                  </div>
+                ) : (
+                  <button
+                    onClick={() => popBalloon(index)}
+                    className="relative cursor-pointer transform transition-all hover:scale-110 interactive-element"
+                  >
+                    {/* Balloon */}
+                    <div
+                      className="w-20 h-24 md:w-24 md:h-28 rounded-full shadow-lg animate-float"
+                      style={{
+                        backgroundColor: balloonColors[index],
+                        animation: `float 3s ease-in-out ${index * 0.3}s infinite`,
+                        boxShadow: `0 0 20px ${balloonColors[index]}80`,
+                      }}
+                    >
+                      {/* Balloon shine */}
+                      <div className="absolute top-2 left-3 w-4 h-6 bg-white/30 rounded-full"></div>
+                    </div>
+                    {/* Balloon knot */}
+                    <div
+                      className="absolute -top-3 left-1/2 -translate-x-1/2 w-3 h-4"
+                      style={{
+                        backgroundColor: balloonColors[index],
+                        clipPath: "polygon(50% 0%, 0% 50%, 50% 100%, 100% 50%)",
+                      }}
+                    ></div>
+                  </button>
+                )}
+              </div>
             </div>
           ))}
         </div>
