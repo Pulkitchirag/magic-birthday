@@ -9,12 +9,14 @@ export const PhotoAlbum = ({ onNext }: PhotoAlbumProps) => {
   const [currentCard, setCurrentCard] = useState(0);
   
   const photos = [
-    "https://placehold.co/400x600/AA33AA/ffffff?text=Sweet+Moment+1",
-    "https://placehold.co/400x600/9D4EDD/ffffff?text=Sweet+Moment+2",
-    "https://placehold.co/400x600/FF1493/ffffff?text=Sweet+Moment+3",
-    "https://placehold.co/400x600/00F5FF/333333?text=Sweet+Moment+4",
-    "https://placehold.co/400x600/FFD700/333333?text=Sweet+Moment+5",
-    "https://placehold.co/400x600/A855F7/ffffff?text=Sweet+Moment+6",
+    "/photos/6.jpg",
+    "/photos/4.jpg",
+    "/photos/7.jpg",
+    "/photos/8.jpg",
+    "/photos/9.jpg",
+    "/photos/10.jpg",
+    "/photos/11.jpg",
+    "/photos/12.jpg",
   ];
 
   const handleSwipe = () => {

@@ -30,6 +30,7 @@ export const GiftBox = ({ onNext }: GiftBoxProps) => {
           {/* Gift Box */}
           <div className="relative">
             {/* Bow */}
+
             <div className="absolute -top-8 left-1/2 -translate-x-1/2 z-10">
               <div className="w-32 h-16 bg-gradient-to-br from-pink-400 to-pink-600 rounded-full"></div>
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-gradient-to-br from-pink-500 to-pink-700 rounded-full"></div>

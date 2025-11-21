@@ -23,14 +23,14 @@ export const Introduction = ({ onNext }: IntroductionProps) => {
           Yes, it's <span className="text-neon-cyan font-bold">YOU!</span>
         </p>
         <p className="text-lg font-quicksand text-muted-foreground">
-          A little surprise awaits...
+          A little surprise awaits you...
         </p>
         
         <Button 
           onClick={onNext}
           className="mt-8 bg-primary hover:bg-primary/90 text-white font-quicksand font-bold text-lg px-8 py-6 rounded-full box-glow interactive-element transition-all hover:scale-105"
         >
-          🎁 Start the surprise
+          🎁 Start the surprise!!!!
         </Button>
       </div>
     </div>

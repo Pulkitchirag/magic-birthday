@@ -7,6 +7,7 @@ interface FinalMessageProps {
 export const FinalMessage = ({ onReplay }: FinalMessageProps) => {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center px-6 animate-fade-in relative overflow-hidden">
+      
       {/* Falling confetti */}
       <div className="absolute inset-0 pointer-events-none">
         {[...Array(30)].map((_, i) => (
@@ -26,14 +27,17 @@ export const FinalMessage = ({ onReplay }: FinalMessageProps) => {
       </div>
 
       <div className="max-w-md w-full text-center space-y-8 relative z-10">
-        {/* Character popping out */}
+
+        {/* Teddy Animation Instead of Tenor */}
         <div className="relative inline-block animate-scale-in">
-          <div className="text-9xl">
-            📦
-          </div>
-          <div className="absolute -top-12 left-1/2 -translate-x-1/2 text-8xl animate-bounce">
-            🐼
-          </div>
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-64 h-64 object-contain mx-auto drop-shadow-xl"
+            src="/assets/bear1.mp4"
+          />
           <div className="absolute -top-8 right-8 text-5xl animate-pulse">
             ❤️
           </div>
@@ -43,17 +47,20 @@ export const FinalMessage = ({ onReplay }: FinalMessageProps) => {
           <h2 className="text-4xl md:text-5xl font-pacifico neon-glow">
             Lots of love for you ❤️
           </h2>
-          
+
           <p className="text-2xl font-quicksand neon-glow-purple">
-            Once again, Happy Birthday!
+            Once again, Happy Birthday my Universe!💞💝
           </p>
-          
+
           <p className="text-xl font-quicksand text-muted-foreground">
             Hope you loved your surprise 🎉
           </p>
+          <p className="text-xl font-quicksand text-muted-foreground">
+            I Love you Soooo much! 🐼💕
+          </p>
         </div>
 
-        <Button 
+        <Button
           onClick={onReplay}
           className="mt-12 bg-accent hover:bg-accent/90 text-accent-foreground font-quicksand font-bold text-lg px-8 py-6 rounded-full interactive-element transition-all hover:scale-105"
         >
